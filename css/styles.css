@@ -1,0 +1,687 @@
+/* Beautifed CSS */
+
+body {
+	background-color: #fff;
+	font-family: Raleway, sans-serif;
+	margin: 0
+}
+
+main {
+	/* padding: 0 2%; */
+	/* margin: 0 5%; */
+	display: flex;
+	flex-direction: column
+}
+
+.flex {
+	display: flex
+}
+
+.column {
+	flex-direction: column
+}
+
+.noMargin {
+	margin: 0
+}
+
+#mainContainer {
+	display: flex;
+	justify-content: center
+}
+
+#topContent {
+	flex: 0 0 66.666666%
+}
+
+#botContent {
+	margin-bottom: 50px
+}
+
+#rightContent {
+	background-color: #f2f2f2;
+	padding: 2%;
+	margin: 1%;
+	border-radius: 25px;
+	flex: 0 0 33.333333%
+}
+
+button {
+    background-color: #c174c8;
+	color: #fff
+}
+.exploreRestaurants {
+    height: 45px;
+    font-weight: 500;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    padding: 0 30px;
+	background: rgb(187,107,187);
+	background: linear-gradient(180deg, rgba(187,107,187,1) 0%, rgba(124,93,246,0.7875525210084033) 0%, rgba(255,0,224,1) 100%);
+}
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: auto;
+	font-size: larger
+}
+
+.small {
+	font-size: small
+}
+
+.bold {
+	font-weight: 700
+}
+
+.unstar {
+	color: #f2f2f2
+}
+
+.price {
+	margin: 5px 0
+}
+
+header {
+	display: flex;
+	justify-content: space-between
+}
+
+.logo {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo #logo {
+	justify-content: space-around;
+	display: flex;
+	height: 50px;
+	padding: 20px 20%;
+	margin: 0 30px
+}
+
+nav {
+	width: 25%;
+	display: flex;
+	margin: 0 2%
+}
+
+.menu a {
+	margin: 2%;
+	text-decoration: none;
+	padding: 2%
+}
+
+hr {
+	margin-top: 0
+}
+
+.menuBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	margin: 0 4px
+}
+
+.menuBox:hover a {
+	color: #0065fc
+}
+
+.activeLink {
+	border-top: solid 2px #0065fc;
+	color: #0065fc
+}
+
+.inactiveLink {
+	color: #000
+}
+
+.searchFormContainer {
+	margin: 2% 0
+}
+
+.searchForm {
+	max-width: 380px;
+  min-width: 280px;
+	border: solid 1px #f2f2f2;
+	border-radius: 15px;
+	display: flex;
+	height: 45px;
+	align-items: center;
+	justify-content: space-between
+}
+
+#pinMap {
+	background-color: #f2f2f2;
+	border-bottom-left-radius: 15px;
+	border-top-left-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+	width: 15%;
+	text-align: center;
+	cursor: pointer
+}
+
+#pinMap:hover {
+	color: #fff;
+	background-color: #0065fc;
+	transition: all .2s ease
+}
+
+input[type=search] {
+	outline: 0;
+	height: inherit
+}
+
+#pinMap:not(:hover) {
+	transition: all .2s ease
+}
+
+.inputSearchBox {
+	width: 50%;
+	font-weight: 700;
+	border: none
+}
+
+.searchButton {
+	height: inherit;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	padding: 0 5%
+}
+
+.searchButton:hover {
+	color: #0065fc;
+	background-color: #fff;
+	transition: all .2s ease;
+	border: solid 1px #f2f2f2
+}
+
+.searchButton:not(:hover) {
+	transition: all .2s ease
+}
+
+#subHeader {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#searchTitle {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	background-color: #f2f2f2;
+}
+
+.filterContainer {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	margin: 2% 0
+}
+
+.filterTitle {
+	margin: 0 2% 0 0
+}
+
+.chip {
+	display: flex;
+	align-items: center;
+	flex-grow: 0;
+	height: 45px;
+	font-weight: 700;
+	border-radius: 25px;
+	background-color: #fff;
+	border: 3px solid #f2f2f2;
+	margin: 10px;
+	border-left-style: none;
+	cursor: pointer
+}
+
+.chip:hover {
+	color: #fff;
+	background-color: #0065fc;
+	transition: all .2s ease
+}
+
+.chip:not(:hover) {
+	transition: all .2s ease
+}
+
+.chip i {
+	background-color: #deebff;
+	display: flex;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+	color: #0065fc;
+	margin-left: -1px
+}
+
+.chip p {
+	margin-right: 15px;
+	overflow: hidden;
+	white-space: nowrap
+}
+
+.chip img {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%
+}
+
+.iconInfo {
+	height: 20px;
+	width: 20px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25px;
+	background-color: #fff;
+	border: 3px solid #f2f2f2;
+	margin: 0 10px 0 -3px;
+	color: #0065fc
+}
+
+.mfCardContainer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: column
+}
+
+.mfCardContainer .card {
+	width: 70%;
+	padding: 5px;
+	margin: 4%;
+	align-items: center
+}
+
+.cardContainer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: row
+}
+
+.cardHeader {
+	display: flex
+}
+
+.card {
+	flex: 1 1 25%;
+	background-color: #fff;
+	border-radius: 25px;
+	border: solid 1px #fff;
+	padding: 3px;
+	margin: 2%;
+	box-shadow: 0 5px 15px rgb(0 0 0 / 6%), 0 6px 6px rgb(0 0 0 / 6%)
+}
+
+.cardBody {
+	margin-left: 10px
+}
+
+.cardFooter {
+	margin: 5px 10px;
+	color: #0065fc;
+  white-space: nowrap;
+}
+
+.hebergementsMarseille {
+	background-color: #f2f2f2;
+	border-radius: 25px;
+	padding: 2%;
+	margin: 2%
+}
+
+.hebergementsMarseille .title,
+mostfamousTitle {
+	padding: 0 40px;
+	padding-top: 15px
+}
+
+.titleHouse {
+	margin-bottom: 0
+}
+
+.miniature {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px
+}
+
+.mostFamousPictures {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    max-height: 180px;
+}
+
+.mostFamousText {
+    height: 100px;
+    width: 250px;
+    justify-content: center;
+}
+
+#spanInfo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row
+}
+
+.info {
+	font-size: smaller
+}
+
+.icon {
+	padding: 1%
+}
+
+.cardLeft {
+	display: flex;
+	flex: 0 0 50%;
+	justify-content: space-evenly;
+	height: 400px
+}
+
+.innerCardLeft {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: auto
+}
+
+.cardRight {
+	display: flex;
+	flex: 0 0 50%;
+	justify-content: space-evenly;
+	height: 400px
+}
+
+.innerCardRight {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: auto
+}
+
+.bigMiniature {
+	height: 380px;
+	width: 100%;
+	object-fit: cover;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px
+}
+
+.mediumMiniature {
+	width: 100%;
+	height: 165px;
+	object-fit: cover;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px
+}
+
+.smallMiniature {
+	width: 100%;
+	height: 105px;
+	object-fit: cover;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px
+}
+
+.cardTitleFooter {
+	margin-bottom: 15px
+}
+
+.cardBorderless {
+	border: none;
+	flex: 1 1 25%;
+	background-color: #fff;
+	border-radius: 25px;
+	margin: 6%;
+	box-shadow: 0 5px 15px rgb(0 0 0 / 6%), 0 6px 6px rgb(0 0 0 / 6%)
+}
+
+#footerContent {
+	font-size: small;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: row;
+	background-color: #f2f2f2;
+	margin: 50px 0 0 0;
+	height: 200px
+}
+
+#footerContent ul {
+	list-style-type: none;
+	text-align: left;
+	padding-inline-start: 0
+}
+
+#footerContent li {
+	cursor: pointer;
+	line-height: 30px
+}
+
+#footerContent li:hover {
+	color: #0065fc
+}
+
+@media screen and (max-width: 662px) {
+  .mfCardContainer .card {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		flex-flow: row wrap
+	}
+	.filterContainer>.filterTitle {
+		flex: 1 0 100%
+	}
+	.filterContainer {
+		flex-flow: wrap;
+		justify-content: flex-start
+	}
+	#container {
+		width: 100vw
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+		flex-flow: row wrap
+	}
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center
+	}
+
+	.logo #logo {
+		justify-content: space-around;
+		display: flex;
+		height: 50px;
+		padding: 20px 0;
+		margin: 0 30px
+	}
+	nav {
+		width: 70%;
+		display: flex;
+		margin: 2% 0 5% 0
+	}
+	#mainContainer {
+		flex-direction: column-reverse
+	}
+	#rightContent {
+		padding: 5%
+	}
+	.cardContainer {
+		flex-direction: column
+	}
+	.innerCardRight {
+		width: auto;
+		height: auto
+	}
+	.miniature {
+		width: 500px;
+		height: 300px
+	}
+	.bigMiniature {
+		height: 500px
+	}
+	.mediumMiniature {
+		height: 200px
+	}
+	.smallMiniature {
+		height: 200px
+	}
+	#footerContent {
+		height: auto
+	}
+	.footerColumn {
+		margin-top: 20px;
+		width: 200px
+	}
+}
+
+@media screen and (max-width:768px) {
+	#container {
+		width: 100vw
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+		flex-flow: row wrap
+	}
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center
+	}
+
+	
+	#headerText {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: -webkit-fill-available;
+		align-items: baseline;
+		background-color: #e7e7e7;
+	}
+
+	#searchTitle {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: -webkit-center;
+		background-color: #f2f2f2;
+		padding: 40px;
+	}
+	.location {
+		margin: 15px;
+	}
+
+	.logo #logo {
+		justify-content: space-around;
+		display: flex;
+		height: 50px;
+		padding: 20px 0;
+		margin: 0 30px
+	}
+	nav {
+		width: 70%;
+		display: flex;
+		margin: 2% 0 5% 0
+	}
+	.filterContainer>.filterTitle {
+		flex: 1 0 100%
+	}
+	.filterContainer {
+		flex-flow: wrap;
+		justify-content: flex-start
+	}
+	.filterContainer>.chip {
+		order: 1;
+		flex: .5;
+		margin-right: auto
+	}
+	#mainContainer {
+		flex-direction: column-reverse
+	}
+	#rightContent {
+		padding: 5%
+	}
+	.cardContainer {
+		flex-direction: column
+	}
+	.hebergementsMarseille {
+		background-color: #fff
+	}
+	.cardLeft {
+		flex-direction: column;
+		flex: 0 0 100%
+	}
+	.cardRight {
+		flex-direction: column;
+		flex: 0 0 100%
+	}
+	.innerCardLeft {
+		width: auto;
+		height: auto
+	}
+	.innerCardRight {
+		width: auto;
+		height: auto
+	}
+	.bigMiniature {
+		height: 200px
+	}
+	.mediumMiniature {
+		height: 200px
+	}
+	.smallMiniature {
+		height: 200px
+	}
+	.miniature {
+		width: 300px;
+		height: 200px
+	}
+	#footerContent {
+		height: auto
+	}
+	.footerColumn {
+		margin-top: 20px;
+		width: 200px
+	}
+}
