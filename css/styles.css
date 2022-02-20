@@ -13,6 +13,11 @@ main {
 	flex-direction: column
 }
 
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+
 .flex {
 	display: flex
 }
@@ -38,13 +43,13 @@ main {
 	margin-bottom: 50px
 }
 
-#rightContent {
+/* #rightContent {
 	background-color: #f2f2f2;
 	padding: 2%;
 	margin: 1%;
 	border-radius: 25px;
 	flex: 0 0 33.333333%
-}
+} */
 
 button {
     background-color: #c174c8;
@@ -61,7 +66,7 @@ button {
     outline: none;
     padding: 0 30px;
 	background: rgb(187,107,187);
-	background: linear-gradient(180deg, rgba(187,107,187,1) 0%, rgba(124,93,246,0.7875525210084033) 0%, rgba(255,0,224,1) 100%);
+	background: linear-gradient(0deg, rgba(187,107,187,1) 0%, #9356DC 0%,#FF79DA 100%);
 }
 .title {
 	display: flex;
@@ -230,7 +235,9 @@ input[type=search] {
 	display: flex;
 	justify-content: start;
 	align-items: center;
-	margin: 2% 0
+    padding: 25px 0;
+    background-color: white;
+    margin: 0;
 }
 
 .filterTitle {
@@ -240,42 +247,44 @@ input[type=search] {
 .chip {
 	display: flex;
 	align-items: center;
-	flex-grow: 0;
-	height: 45px;
+	height: 70px;
 	font-weight: 700;
-	border-radius: 25px;
-	background-color: #fff;
-	border: 3px solid #f2f2f2;
+	border-radius: 20px;
 	margin: 10px;
 	border-left-style: none;
-	cursor: pointer
+	cursor: pointer;
+	background-color: #f2f2f2;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	box-shadow: 0 3px 6px rgb(0 0 0 / 15%), 0 3px 6px rgb(0 0 0 / 5%)
 }
+  
 
 .chip:hover {
-	color: #fff;
-	background-color: #0065fc;
-	transition: all .2s ease
+	background-color: #e9d6ff70;
+	transition: all .2s ease;
+	box-shadow:0 10px 20px rgb(0 0 0 / 10%), 0 5px 6px rgb(0 0 0 / 10%)
 }
+
+.chip:hover i:not(:hover) {
+	color: #9356DC;
+	transition: all .2s ease;
+}
+
 
 .chip:not(:hover) {
 	transition: all .2s ease
 }
 
 .chip i {
-	background-color: #deebff;
-	display: flex;
-	border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 	width: 50px;
 	height: 50px;
-	align-items: center;
-	justify-content: center;
-	margin-right: 15px;
-	color: #0065fc;
-	margin-left: -1px
+	color: #999999;
 }
 
 .chip p {
-	margin-right: 15px;
 	overflow: hidden;
 	white-space: nowrap
 }
@@ -285,6 +294,17 @@ input[type=search] {
 	width: 50px;
 	border-radius: 50%
 }
+.numberChip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: #9356DC;
+	color: white;
+    margin-left: -7px;
+  }
 
 .iconInfo {
 	height: 20px;
@@ -309,10 +329,10 @@ input[type=search] {
 }
 
 .mfCardContainer .card {
-	width: 70%;
+	/* width: 70%;
 	padding: 5px;
 	margin: 4%;
-	align-items: center
+	align-items: center */
 }
 
 .cardContainer {
@@ -338,13 +358,13 @@ input[type=search] {
 }
 
 .cardBody {
-	margin-left: 10px
+	margin-left: 10px;
+	flex: 1 1 100px;
 }
 
 .cardFooter {
 	margin: 5px 10px;
-	color: #0065fc;
-  white-space: nowrap;
+  	white-space: nowrap;
 }
 
 .hebergementsMarseille {
@@ -354,8 +374,7 @@ input[type=search] {
 	margin: 2%
 }
 
-.hebergementsMarseille .title,
-mostfamousTitle {
+.hebergementsMarseille .title, .mostfamousTitle {
 	padding: 0 40px;
 	padding-top: 15px
 }
@@ -374,6 +393,7 @@ mostfamousTitle {
 
 .mostFamousPictures {
     width: 100%;
+	height: 150px;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -381,9 +401,9 @@ mostfamousTitle {
 }
 
 .mostFamousText {
-    height: 100px;
-    width: 250px;
-    justify-content: center;
+	height: 80px;
+	flex-direction: row;
+    align-items: center;
 }
 
 #spanInfo {
@@ -469,13 +489,13 @@ mostfamousTitle {
 #footerContent {
 	font-size: small;
 	display: flex;
-	justify-content: space-around;
+    padding-left: 20px;
 	flex-wrap: wrap;
 	align-items: center;
 	flex-direction: row;
-	background-color: #f2f2f2;
-	margin: 50px 0 0 0;
-	height: 200px
+	background-color: #3b3b3b;
+	color: white;
+	height: 200px;
 }
 
 #footerContent ul {
@@ -543,9 +563,9 @@ mostfamousTitle {
 	#mainContainer {
 		flex-direction: column-reverse
 	}
-	#rightContent {
+	/* #rightContent {
 		padding: 5%
-	}
+	} */
 	.cardContainer {
 		flex-direction: column
 	}
@@ -575,6 +595,10 @@ mostfamousTitle {
 	}
 }
 
+
+
+/* Responsive Phone*/
+
 @media screen and (max-width:768px) {
 	#container {
 		width: 100vw
@@ -598,6 +622,7 @@ mostfamousTitle {
 		width: -webkit-fill-available;
 		align-items: baseline;
 		background-color: #e7e7e7;
+		box-shadow: 0px 0px 6px #a5a5a5;
 	}
 
 	#searchTitle {
@@ -628,19 +653,37 @@ mostfamousTitle {
 		flex: 1 0 100%
 	}
 	.filterContainer {
+		display: flex;
 		flex-flow: wrap;
-		justify-content: flex-start
+		flex-direction: column;
+		align-items: stretch;
+
 	}
 	.filterContainer>.chip {
-		order: 1;
-		flex: .5;
-		margin-right: auto
+		width: -webkit-fill-available;
+		margin: 10px 20px;
 	}
+	.filterTitle {
+		margin:  25px;
+	}
+	#topContent {
+		flex: none;
+	}
+	
 	#mainContainer {
-		flex-direction: column-reverse
+		flex-direction: column;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: -webkit-fill-available;
 	}
 	#rightContent {
-		padding: 5%
+		width: -webkit-fill-available;
+		background-color: #f2f2f2;
+		padding: 2%;
+		margin: none;
+		border-radius: none;
+		padding-bottom: 50px;
 	}
 	.cardContainer {
 		flex-direction: column
@@ -677,11 +720,20 @@ mostfamousTitle {
 		width: 300px;
 		height: 200px
 	}
+
+	#footerLogo {
+		width: 65%;
+		filter: brightness(0) invert(1);
+	}
+
 	#footerContent {
 		height: auto
 	}
 	.footerColumn {
 		margin-top: 20px;
 		width: 200px
+	}
+	.footerColumn li i {
+		margin-right: 10px;
 	}
 }
