@@ -369,6 +369,14 @@ input[type=search] {
 	margin: 0 2% 0 0
 }
 
+.menuComposeTitle {
+	text-transform: uppercase;
+    border-bottom: 4px solid #99E2D0;
+    width: 40px;
+    margin: 10px;
+    line-height: 40px;
+}
+
 .chip {
 	display: flex;
 	align-items: center;
@@ -831,6 +839,7 @@ input[type=search] {
 	.filterHeaderContainer .filterTitle {
 		font-family: 'Shrikhand', cursive;
 		font-size: x-large;
+		font-weight: 400;
 	}
 	.filterTitle {
 		margin:  25px;
