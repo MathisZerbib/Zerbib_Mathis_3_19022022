@@ -30,6 +30,10 @@ main {
 	margin: 0
 }
 
+.light {
+	font-weight: 200;
+}
+
 /* Loader */
 .lds-ring {
 	display: inline-block;
@@ -375,6 +379,34 @@ input[type=search] {
     width: 40px;
     margin: 10px;
     line-height: 40px;
+}
+
+
+.chipMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    font-weight: 700;
+    padding: 5px 20px 15px 15px;
+    border-radius: 20px;
+    margin: 15px;
+    border-left-style: none;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 15%), 0 3px 6px rgb(0 0 0 / 5%);
+}
+.cardText {
+	width: -webkit-fill-available;
+}
+
+.cardText p {
+	margin-bottom: 5px;
+}
+.footerCardText {
+	display: flex;
+    justify-content: space-between;
 }
 
 .chip {
