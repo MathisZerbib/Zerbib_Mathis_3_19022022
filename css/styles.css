@@ -30,6 +30,11 @@ main {
 	margin: 0
 }
 
+.noStyle {
+	text-decoration: none;
+	color: black;
+}
+
 #mainContainer {
 	display: flex;
 	justify-content: center
@@ -98,8 +103,8 @@ header {
 }
 
 .logo {
-	display: flex;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -343,8 +348,27 @@ input[type=search] {
 	flex-direction: row
 }
 
+.cardNew {
+    background-color: #9ef0d0;
+    color: #0d9c65;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    position: absolute;
+    right: 35px;
+    margin-top: 20px;
+    height: 15px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.cardNew p {
+	margin: 0 10px;
+}
+
 .cardHeader {
-	display: flex
+	display: flex;
+	flex-direction: row-reverse;
 }
 
 .card {
@@ -366,6 +390,12 @@ input[type=search] {
 	margin: 5px 10px;
   	white-space: nowrap;
 }
+
+.fa-heart {
+	color: #9356DC;
+  }
+
+
 
 .hebergementsMarseille {
 	background-color: #f2f2f2;
