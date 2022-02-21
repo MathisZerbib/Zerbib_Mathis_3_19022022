@@ -77,10 +77,14 @@
                 <div id="rightContent">
                     <h1 class="title mostfamousTitle">Restaurants</h1>
 
+                    <div id='hideMe'>
+                        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                    </div>
+
                     <div class="hebergements">
                         <div class="mfCardContainer">
-                            <div class="card flex">
-                                <a id="menu1" href="menu/1.html" class="noStyle">
+                            <div class="card flex" id="menu1">
+                                <a href="menu/1.html" class="noStyle">
                                 <div class="cardHeader">
                                     <img class="mostFamousPictures"
                                         src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -101,8 +105,8 @@
                                 </div>
                             </div>
 
-                            <div class="card flex">
-                                <a id="menu2" href="menu/2.html" class="noStyle">
+                            <div class="card flex" id="menu2">
+                                <a  href="menu/2.html" class="noStyle">
                                     <div class="cardHeader">
                                         <img class="mostFamousPictures" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                                             alt="La note enchantée Charonne miniature">
@@ -123,8 +127,8 @@
 
                             </div>
 
-                            <div class="card flex">
-                                <a id="menu3" href="menu/3.html" class="noStyle">
+                            <div class="card flex" id="menu3">
+                                <a href="menu/3.html" class="noStyle">
                                 <div class="cardHeader">
                                     <img class="mostFamousPictures" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                                         alt="A la française Cité Rouge miniature">
@@ -142,8 +146,8 @@
                             </div>
 
                             
-                            <div class="card flex">
-                                <a id="menu4" href="menu/4.html" class="noStyle">
+                            <div class="card flex" id="menu4">
+                                <a href="menu/4.html" class="noStyle">
                                 <div class="cardHeader">
                                     <img class="mostFamousPictures" src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                                         alt="Le délice des sens Folie-Méricourt miniature">
@@ -182,24 +186,10 @@
     </div>
 
     
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-    crossorigin="anonymous"></script>
-    
-    <script> 
 
-        $(".heart").click(function() {
-            if ($(this).hasClass('fa-solid')) {
-                $(this).removeClass('fa-solid');
-                $(this).addClass('fa-regular');
-            }
-            else {
-                $(this).addClass('fa-solid');
-                $(this).removeClass('fa-regular'); 
-            }
-    });
-    </script>
+    
+
+
 </body>
 
 </html>
