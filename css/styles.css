@@ -701,6 +701,16 @@ input[type=search] {
 		width: -webkit-fill-available;
 		margin: 10px 20px;
 	}
+	.filterHeaderContainer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	.filterHeaderContainer .filterTitle {
+		font-family: 'Shrikhand', cursive;
+		font-size: x-large;
+	}
 	.filterTitle {
 		margin:  25px;
 	}
