@@ -437,6 +437,12 @@ input[type=search] {
     animation: makeItfadeIn 0.2s 0.2s forwards;
 }
 
+.chipMenu:hover .visibleOnSelect > i:not(:hover) {
+	transform: rotate(360deg);
+    transition: all .2s ease;
+
+}
+
 
 .cardText {
 	flex: auto;
