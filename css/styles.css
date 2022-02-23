@@ -75,13 +75,13 @@ main {
 	  display: flex;
 	  align-content: center;
 	  justify-content: center;
-    -moz-animation: cssAnimation 0s ease-in 0.5s forwards;
+    -moz-animation: cssAnimation 0s ease-in 0.8s forwards;
     /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 0.5s forwards;
+    -webkit-animation: cssAnimation 0s ease-in 0.8s forwards;
     /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 0.5s forwards;
+    -o-animation: cssAnimation 0s ease-in 0.8s forwards;
     /* Opera */
-    animation: cssAnimation 0s ease-in 0.5s forwards;
+    animation: cssAnimation 0s ease-in 0.8s forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
@@ -163,6 +163,12 @@ main {
 }
 .leftSubHeader {
 	width: -webkit-fill-available;
+    /* flex: auto;
+    align-items: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+
 }
 #topContent {
 	flex: 0 0 66.666666%
@@ -386,9 +392,9 @@ input[type=search] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    height: 70px;
+	width: 360px;
     font-weight: 700;
-    padding: 5px 20px 15px 15px;
     border-radius: 20px;
     margin: 15px;
     border-left-style: none;
@@ -397,16 +403,66 @@ input[type=search] {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     box-shadow: 0 3px 6px rgb(0 0 0 / 15%), 0 3px 6px rgb(0 0 0 / 5%);
 }
+
+.visibleOnSelect {
+	visibility: hidden;
+	width: 0px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+
+.chip:hover i:not(:hover) {
+	color: #9356DC;
+	transition: all .2s ease;
+}
+
+
+.chipMenu:hover .visibleOnSelect:not(:hover) {
+	visibility: visible;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 70px;
+    background-color: #99E2D0;
+    transition: all .2s ease;
+    color: white;
+    background-size: 200% 100%;
+    background-position: left;
+    animation: makeItfadeIn 0.2s 0.2s forwards;
+}
+
+
 .cardText {
-	width: -webkit-fill-available;
+	flex: auto;
+	margin: 5px 20px 15px 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
 }
 
 .cardText p {
 	margin-bottom: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .footerCardText {
-	display: flex;
+    align-items: flex-end;
+    height: 100%;
+    display: flex;
     justify-content: space-between;
+}
+
+.footerCardText span {
+	height: 25px;
+    width: 30px;
+	margin: 5px 15px;
 }
 
 .chip {
@@ -536,7 +592,6 @@ input[type=search] {
 	background-color: #fff;
 	border-radius: 25px;
 	border: solid 1px #fff;
-	padding: 3px;
 	margin: 2%;
 	box-shadow: 0 5px 15px rgb(0 0 0 / 6%), 0 6px 6px rgb(0 0 0 / 6%)
 }
