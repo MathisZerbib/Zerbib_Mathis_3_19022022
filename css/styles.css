@@ -2,7 +2,8 @@
 body {
 	background-color: #fff;
 	font-family: Raleway, sans-serif;
-	margin: 0 
+	margin: 0;
+	transition: all .5s ease;
 }
 main {
 	display: flex;
@@ -44,12 +45,28 @@ main {
 	margin: 15px;
 }
 
+.filterHeaderContainer .filterTitle {
+	font-family: 'Shrikhand', cursive;
+	font-size: x-large;
+	font-weight: 400;
+	margin: 10px;
+}
+
+.filterHeaderContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+
 /* Loader Spinner */
 .lds-ring {
-	display: inline-block;
+
+	display: flex;
+	place-content: center;
 	position: relative;
-	width: 80px;
-	height: 80px;
+	
 }
 .lds-ring div {
 	box-sizing: border-box;
@@ -80,18 +97,29 @@ main {
 		transform: rotate(360deg);
    }
 }
+
+
 /* Hide Spinner */
+
+#loading {
+	font-family: 'Shrikhand', cursive;
+    font-size: x-large;
+    font-weight: 400;
+}
 #hideMe {
+	margin-top: 250px;
 	display: flex;
+	text-align: center;
+	flex-direction: column;
 	align-content: center;
 	justify-content: center;
-	-moz-animation: cssAnimation 0s ease-in 0.8s forwards;
+	-moz-animation: hideThis 0s ease-in 0.8s forwards;
    /* Firefox */
-	-webkit-animation: cssAnimation 0s ease-in 0.8s forwards;
+	-webkit-animation: hideThis 0s ease-in 0.8s forwards;
    /* Safari and Chrome */
-	-o-animation: cssAnimation 0s ease-in 0.8s forwards;
+	-o-animation: hideThis 0s ease-in 0.8s forwards;
    /* Opera */
-	animation: cssAnimation 0s ease-in 0.8s forwards;
+	animation: hideThis 0s ease-in 0.8s forwards;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 }
@@ -99,17 +127,19 @@ main {
 
 
 /* Animate */
-@keyframes cssAnimation {
+@keyframes hideThis {
 	to {
 		width:0;
 		height:0;
+		margin-top: 0;
 		overflow:hidden;
    }
 }
-@-webkit-keyframes cssAnimation {
+@-webkit-keyframes hideThis {
 	to {
 		width:0;
 		height:0;
+		margin-top: 0;
 		visibility:hidden;
    }
 }
@@ -173,19 +203,7 @@ main {
 	text-decoration: none;
 	color: black;
 }
-@media screen and (min-width:992px) and (max-width:1600px) {
-	.mfCardContainer {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		align-items: center;
-		flex-direction: row;
-	}
-	.mfCardContainer > .card {
-		flex: 1 1 25%; /*grow | shrink | basis */
-	}
 
-}
 #mainContainer {
 	display: flex;
 	justify-content: center;
@@ -367,8 +385,12 @@ input[type=search] {
 	background-color: white;
 	margin: 0;
 }
-.filterTitle {
+/* .filterTitle {
 	margin: 0 2% 0 0 
+} */
+
+.menuCompose {
+	width: -webkit-fill-available;
 }
 .menuComposeTitle {
 	text-transform: uppercase;
@@ -382,7 +404,7 @@ input[type=search] {
 	align-items: center;
 	justify-content: space-between;
 	height: 70px;
-	width: 360px;
+	/* width: 360px; */
 	font-weight: 700;
 	border-radius: 20px;
 	margin: 15px;
@@ -679,16 +701,29 @@ input[type=search] {
 	margin: 6%;
 	box-shadow: 0 5px 15px rgb(0 0 0 / 6%), 0 6px 6px rgb(0 0 0 / 6%) 
 }
+
+
+.commanderButton {
+	display: flex;
+    /* align-content: center; */
+    place-content: center;
+    padding: 30px;
+}
 #footerContent {
 	font-size: small;
 	display: flex;
 	padding-left: 20px;
+	padding-top: 20px;
 	flex-wrap: wrap;
 	align-items: center;
 	flex-direction: row;
 	background-color: #3b3b3b;
 	color: white;
 	height: 200px;
+}
+#footerLogo {
+	width: 65%;
+	filter: brightness(0) invert(1);
 }
 #footerContent ul {
 	list-style-type: none;
@@ -704,6 +739,30 @@ input[type=search] {
 }
 
 
+
+/* Desktop Responsive */
+@media screen and (min-width:992px) and (max-width:1920px) {
+	.chip {
+		width: 40%;
+	}
+	.mfCardContainer {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: row;
+	}
+	.mfCardContainer > .card {
+		flex: 1 1 25%; /*grow | shrink | basis */
+	}
+
+	.chipMenu {
+		width: auto;
+	}
+
+}
+
+
 /* Tablet */
 @media screen and (min-width:768px) and (max-width:992px) {
 	body {
@@ -714,9 +773,8 @@ input[type=search] {
 	.filterContainer>.filterTitle {
 		flex: 1 0 100% 
    }
-	.filterContainer {
-		flex-flow: wrap;
-		justify-content: flex-start 
+	.chip {
+		width: 40%;
    }
 	#container {
 		width: 100vw 
@@ -857,23 +915,14 @@ input[type=search] {
 		display: flex;
 		flex-flow: wrap;
 		flex-direction: column;
-		align-items: stretch;
+		align-items: flex-start;
    }
 	.filterContainer>.chip {
 		width: -webkit-fill-available;
 		margin: 10px 20px;
    }
-	.filterHeaderContainer {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-start;
-   }
-	.filterHeaderContainer .filterTitle {
-		font-family: 'Shrikhand', cursive;
-		font-size: x-large;
-		font-weight: 400;
-   }
+
+
 	.filterTitle {
 		margin: 25px;
    }
@@ -930,10 +979,7 @@ input[type=search] {
 		width: 300px;
 		height: 200px 
    }
-	#footerLogo {
-		width: 65%;
-		filter: brightness(0) invert(1);
-   }
+
 	#footerContent {
 		height: auto 
    }
