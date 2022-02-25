@@ -269,12 +269,14 @@ button {
 	align-items: center;
 }
 .logo #logo {
-	justify-content: space-around;
-	display: flex;
-	height: 50px;
-	padding: 20px 20%;
-	margin: 0 30px 
+    justify-content: space-around;
+    display: flex;
+    height: 50px;
+    padding: 20px 0;
+    margin: 20px 30px;
 }
+
+
 nav {
 	width: 25%;
 	display: flex;
@@ -602,9 +604,11 @@ input[type=search] {
 	padding: 2%;
 	margin: 2% 
 }
+
+
 .hebergementsMarseille .title, .mostfamousTitle {
-	padding: 0 40px;
-	padding-top: 15px 
+    padding: 0 100px;
+    padding-top: 60px;
 }
 .titleHouse {
 	margin-bottom: 0 
@@ -720,6 +724,7 @@ input[type=search] {
 	background-color: #3b3b3b;
 	color: white;
 	height: 200px;
+	padding: 20px 5%;
 }
 #footerLogo {
 	width: 65%;
@@ -738,7 +743,25 @@ input[type=search] {
 	color: #0065fc 
 }
 
+.footerColumn li i {
+	margin-right: 10px;
+}
 
+
+@media screen and (min-width: 1600px) {
+
+		.mfCardContainer {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: row;
+	}
+	.mfCardContainer > .card {
+		flex: 1 1 20%; /*grow | shrink | basis */
+	}
+	
+}
 
 /* Desktop Responsive */
 @media screen and (min-width:992px) and (max-width:1920px) {
@@ -753,7 +776,7 @@ input[type=search] {
 		flex-direction: row;
 	}
 	.mfCardContainer > .card {
-		flex: 1 1 25%; /*grow | shrink | basis */
+		flex: 1 1 40%; /*grow | shrink | basis */
 	}
 
 	.chipMenu {
@@ -866,6 +889,10 @@ input[type=search] {
 		width: 100%;
    }
 
+   .hebergementsMarseille .title, .mostfamousTitle {
+	padding: 0 40px;
+	padding-top: 15px 
+}
    .mfCardContainer .card {
 	width: 90%;
 	display: flex;
@@ -987,7 +1014,5 @@ input[type=search] {
 		margin-top: 20px;
 		width: 200px 
    }
-	.footerColumn li i {
-		margin-right: 10px;
-   }
+
 }
