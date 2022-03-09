@@ -21,6 +21,9 @@ main {
 .noMargin {
 	margin: 0 
 }
+.noDecoration {
+	text-decoration: none;
+}
 .light {
 	font-weight: 200;
 }
@@ -29,6 +32,9 @@ main {
 }
 .bgWhite {
 	background-color: white;
+}
+.white {
+	color: white;
 }
 .title {
 	display: flex;
@@ -222,7 +228,7 @@ header {
 	display: flex;
 	justify-content: center;
 }
-#headerText {
+.headerText {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -233,6 +239,7 @@ header {
 }
 .leftSubHeader {
 	width: -webkit-fill-available;
+	background-color: #f2f2f2;
 }
 #topContent {
 	flex: 0 0 66.666666% 
@@ -399,9 +406,13 @@ input[type=search] {
 	margin: 0;
 }
 
-.menuCompose {
-	width: -webkit-fill-available;
+.sticky {
+	margin-top: -40px;
+    position: sticky;
+    border-radius: 40px;
 }
+
+
 .menuComposeTitle {
 	text-transform: uppercase;
 	border-bottom: 4px solid #99E2D0;
@@ -414,7 +425,7 @@ input[type=search] {
 	align-items: center;
 	justify-content: space-between;
 	height: 70px;
-	/* width: 360px; */
+	width: 360px;
 	font-weight: 700;
 	border-radius: 20px;
 	margin: 15px;
@@ -436,10 +447,7 @@ input[type=search] {
 }
 
 /*Chip rotation effect */
-.chip:hover i:not(:hover) {
-	color: #9356DC;
-	transition: all .2s ease;
-}
+
 .chipMenu:hover .visibleOnSelect:not(:hover) {
 	visibility: visible;
 	display: flex;
@@ -604,7 +612,8 @@ input[type=search] {
 	white-space: nowrap;
 }
 .fa-heart:hover {
-	color: #9356DC;
+    color: red;
+    cursor: pointer;
 }
 .fa-heart {
 }
@@ -788,9 +797,6 @@ input[type=search] {
 	.mfCardContainer > .card {
 		flex: 1 1 40%; /*grow | shrink | basis */
 	}
-	.menuCompose {
-		width: 500px;
-	}
 	.menuComposeTitle {
 		align-self: normal;
 	}
@@ -805,8 +811,7 @@ input[type=search] {
 @media screen and (min-width:768px) and (max-width:992px) {
 	body {
 		display: flex;
-		flex-direction: column;
-		 
+		flex-direction: column; 
    }
 	.filterContainer>.filterTitle {
 		flex: 1 0 100% 
@@ -816,8 +821,7 @@ input[type=search] {
    }
 	body {
 		display: flex;
-		flex-direction: column;
-		 
+		flex-direction: column; 
    }
 	header {
 		display: flex;
@@ -875,15 +879,14 @@ input[type=search] {
 @media screen and (max-width:768px) {
 	body {
 		display: flex;
-		flex-direction: column;
-		 
+		flex-direction: column; 
    }
 	header {
 		display: flex;
 		flex-direction: column;
 		align-items: center 
    }
-	#headerText {
+	.headerText {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -1029,3 +1032,12 @@ input[type=search] {
    }
 
 }
+
+
+@media only screen and (min-width: 1280px) {
+
+	body { 
+	   font-size: 1.1em; 
+	}
+ 
+ }
