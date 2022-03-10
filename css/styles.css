@@ -7,18 +7,17 @@ html, body {
 	max-width: 100%;
     overflow-x: hidden;
 }
-main {
-	display: flex;
-	flex-direction: column 
+.column {
+	flex-direction: column;
 }
-* {
-	font-family: 'Roboto', sans-serif;
+.row {
+	flex-direction: row;
 }
 .flex {
 	display: flex 
 }
-.column {
-	flex-direction: column 
+.alignItemsCenter {
+	align-items: center;
 }
 .noMargin {
 	margin: 0 
@@ -39,8 +38,6 @@ main {
 	color: white;
 }
 .title {
-	display: flex;
-	align-items: center;
 	justify-content: space-between;
 	margin-top: auto;
 	font-size: larger 
@@ -67,9 +64,6 @@ main {
 }
 
 .filterHeaderContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     min-width: inherit;
     justify-content: space-around;
 }
@@ -77,8 +71,6 @@ main {
 
 /* Loader Spinner */
 .lds-ring {
-
-	display: flex;
 	place-content: center;
 	position: relative;
 	
@@ -123,9 +115,7 @@ main {
 }
 #hideMe {
 	margin-top: 250px;
-	display: flex;
 	text-align: center;
-	flex-direction: column;
 	align-content: center;
 	justify-content: center;
 	-moz-animation: hideThis 0s ease-in 0.8s forwards;
@@ -220,7 +210,6 @@ main {
 }
 
 #mainContainer {
-	display: flex;
 	justify-content: center;
 	width: -webkit-fill-available;
 }
@@ -228,12 +217,9 @@ main {
 	padding: 40px;
 }
 header {
-	display: flex;
 	justify-content: center;
 }
 .headerText {
-	display: flex;
-	flex-direction: row;
 	justify-content: center;
 	width: -webkit-fill-available;
 	align-items: baseline;
