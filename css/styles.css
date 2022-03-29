@@ -682,12 +682,22 @@ input[type=search] {
     white-space: nowrap;
 }
 
-.fa-heart:hover {
-    color: red;
+.fa-heart {
     cursor: pointer;
 }
 
-.fa-heart {}
+.cardFooter:hover .empty-heart,
+.cardFooter .filled-heart,
+.filterHeaderContainer:hover .empty-heart,
+.filterHeaderContainer .filled-heart {
+    display: none;
+}
+
+.cardFooter:hover .filled-heart,
+.filterHeaderContainer:hover .filled-heart {
+    display: inline;
+    color: red;
+}
 
 .hebergementsMarseille {
     background-color: #f2f2f2;
@@ -1123,3 +1133,9 @@ input[type=search] {
         font-size: 1.1em;
     }
 }
+
+
+/* Fix Loading full page no overflow */
+
+
+/* CSS COEUR HIDDEN TWO ICONS */
