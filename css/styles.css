@@ -942,10 +942,6 @@ input[type=search] {
     #mainContainer {
         flex-direction: column-reverse
     }
-    /* #rightContent {
-		padding: 5% 
-   }
-	*/
     .cardContainer {
         flex-direction: column
     }
@@ -1133,9 +1129,3 @@ input[type=search] {
         font-size: 1.1em;
     }
 }
-
-
-/* Fix Loading full page no overflow */
-
-
-/* CSS COEUR HIDDEN TWO ICONS */
