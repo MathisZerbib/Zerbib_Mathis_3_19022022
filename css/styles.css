@@ -624,13 +624,6 @@ input[type=search] {
     color: #0065fc
 }
 
-.mfCardContainer .card {
-    /* width: 70%;
-	padding: 5px;
-	margin: 4%;
-	align-items: center */
-}
-
 .cardContainer {
     display: flex;
     justify-content: center;
@@ -691,12 +684,35 @@ input[type=search] {
 .filterHeaderContainer:hover .empty-heart,
 .filterHeaderContainer .filled-heart {
     display: none;
+    color: black;
+    animation: toRed 2.0s;
+    transition-delay: 3s;
 }
 
 .cardFooter:hover .filled-heart,
 .filterHeaderContainer:hover .filled-heart {
     display: inline;
-    color: red;
+    transition: 2.0s;
+}
+
+.filled-heart::before {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
+}
+
+@keyframes toRed {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+        color: linear-gradient(0deg, #9356dc, #ff79da);
+    }
 }
 
 .hebergementsMarseille {
