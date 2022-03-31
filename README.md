@@ -1,5 +1,4 @@
-# OpenClassRoomProject
-MathisZerbib_3_19022020
+# Animation CSS/ OmyFood!
+P03 OpenClassRoom React Path
 
 
-OmyFood!
