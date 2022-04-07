@@ -142,7 +142,6 @@ body {
     text-align: center;
     align-content: center;
     justify-content: center;
-    display: absolute;
     -moz-animation: hideThis 0s ease-in 1s forwards;
     /* Firefox */
     -webkit-animation: hideThis 0s ease-in 1s forwards;
@@ -479,12 +478,13 @@ input[type=search] {
     border-left-style: none;
     cursor: pointer;
     background-color: white;
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
     box-shadow: 0 3px 6px rgb(0 0 0 / 15%), 0 3px 6px rgb(0 0 0 / 5%);
 }
 
 .visibleOnSelect {
     visibility: hidden;
+    opacity: 0;
     width: 0px;
     display: flex;
     align-items: center;
@@ -492,12 +492,47 @@ input[type=search] {
     height: 100%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    transition: all .5s ease-in-out;
 }
 
 
 /*Chip rotation effect */
 
-.chipMenu:hover .visibleOnSelect:not(:hover) {
+.visibleOnSelect {
+    animation: inAndOut 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes inAndOut {
+    from {
+        opacity: 0;
+        color: transparent!important;
+    }
+    to {
+        color: white!important;
+        opacity: 1;
+    }
+}
+
+.fa-circle-check {
+    animation: inAndOut 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    color: transparent!important;
+}
+
+.chipMenu:hover .fa-circle-check {
+    color: white!important;
+}
+
+.chipMenu:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5%);
+}
+
+.chipMenu:hover .visibleOnSelect,
+.visibleOnSelect:hover {
     visibility: visible;
     display: flex;
     flex-direction: column;
@@ -505,16 +540,16 @@ input[type=search] {
     height: 100%;
     width: 70px;
     background-color: #99E2D0;
-    transition: all .2s ease;
     color: white;
     background-size: 200% 100%;
     background-position: left;
-    animation: makeItfadeIn 0.2s 0.2s forwards;
+    transition: all .2s ease-in-out;
 }
 
-.chipMenu:hover .visibleOnSelect>i:not(:hover) {
-    transform: rotate(360deg);
-    transition: all .2s ease;
+.chipMenu:hover .visibleOnSelect>i:not(:hover),
+.chipMenu:hover .visibleOnSelect>i:hover {
+    transform: rotate(-360deg);
+    transition: all .5s ease-in-out;
 }
 
 .homeCard {
@@ -685,7 +720,7 @@ input[type=search] {
 .filterHeaderContainer .filled-heart {
     display: none;
     color: black;
-    animation: toRed 2.0s;
+    animation: halfOpacity 2.0s;
 }
 
 .cardFooter:hover .filled-heart,
@@ -697,18 +732,17 @@ input[type=search] {
 .filled-heart::before {
     background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: initial;
 }
 
-@keyframes toRed {
+@keyframes halfOpacity {
     0% {
         opacity: 0.5;
-        color: #1e063d;
     }
     100% {
         opacity: 1;
-        color: linear-gradient(0deg, #9356dc, #ff79da);
     }
 }
 
@@ -1090,7 +1124,7 @@ input[type=search] {
         background-color: #f2f2f2;
         padding: 2%;
         margin: 0;
-        border-radius: none;
+        border-radius: 0!important;
         padding-bottom: 50px;
     }
     .cardContainer {
