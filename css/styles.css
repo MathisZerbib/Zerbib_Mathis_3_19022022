@@ -492,7 +492,7 @@ input[type=search] {
     height: 100%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    transition: all .5s ease-in-out;
+    transition: all .6s ease-in-out;
 }
 
 
@@ -549,7 +549,7 @@ input[type=search] {
 .chipMenu:hover .visibleOnSelect>i:not(:hover),
 .chipMenu:hover .visibleOnSelect>i:hover {
     transform: rotate(-360deg);
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .homeCard {
